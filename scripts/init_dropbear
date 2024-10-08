@@ -1,0 +1,24 @@
+#!/bin/sh
+
+ifconfig eth0 10.0.2.15
+ping -c 512 -A 10.0.2.2 >/dev/null 2>/dev/null
+
+if [ ! -e /etc/passwd ]; then
+  touch /etc/passwd
+fi
+
+if [ ! -e /etc/group ]; then
+  touch /etc/group
+fi
+
+adduser root -u 0
+
+if [ ! -e /etc/dropbear ]; then
+  mkdir /etc/dropbear
+fi
+
+if [ ! -e /home/root ]; then
+  mkdir /home /home/root
+fi
+
+dropbear -p 5522 -R -B -a

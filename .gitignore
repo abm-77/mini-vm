@@ -1,0 +1,7 @@
+initramfs.cpio.gz
+*.o
+*.a
+rootfs/
+sysroot/
+busybox/
+dropbear/

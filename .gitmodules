@@ -1,0 +1,12 @@
+[submodule "linux-stable"]
+	path = linux-stable
+	url = ./linux-stable
+[submodule "busybox"]
+	path = busybox
+	url = ./busybox/
+[submodule "dropbear"]
+	path = dropbear
+	url = ./dropbear
+[submodule "musl"]
+	path = musl
+	url = ./musl
